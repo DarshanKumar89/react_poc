@@ -1,10 +1,10 @@
 var React = require('react');
 
 var App = React.createClass({
-	render: function() {
+	render: function() { 
 		return (
-			<h1>Hello world!!!! qwert</h1>
-		);
+			<h1>Hello worldsds!!!!</h1>
+		); 
 	}
 	
 });

@@ -75,7 +75,7 @@ gulp.task('sass', function() {
 
 /*BROWSERFIY*/
 gulp.task('js', function() {
-return browserify('scripts/main.js')
+return browserify('components/main.js')
  .transform(reactify)
 .bundle()
 .pipe(source('bundle.js'))
@@ -91,7 +91,7 @@ gulp.task('watch', function() {
     gulp.watch('fonts/*.*', ['fonts']);
     gulp.watch('images/*.*', ['images']);
     gulp.watch('styles/*.scss', ['sass']);
-    gulp.watch('scripts/*.js', ['js']);
+    gulp.watch('components/**/*.js', ['js']);
 });
 
 
