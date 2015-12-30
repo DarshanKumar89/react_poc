@@ -1,5 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var App = require('./Dashboard/App'); 
-ReactDOM.render(<App/>, document.getElementById("app"));  
+var Dashboard = require('./Dashboard/Dashboard');
+
+
+
+
+
+ReactDOM.render(<Dashboard/>, document.getElementById("app"));  
  
