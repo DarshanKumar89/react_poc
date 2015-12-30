@@ -1,22 +1,65 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var React = require('react');
 
-var App = React.createClass({displayName: "App",
+var Dashboard = React.createClass({displayName: "Dashboard",
 	render: function() { 
 		return (
-			React.createElement("h1", null, "Hello worldsds!!!!")
+			React.createElement("div", {className: "container-fluid"}, 
+
+
+    React.createElement("div", {className: "navbar-header"}, 
+      React.createElement("button", {type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#bs-example-navbar-collapse-1", "aria-expanded": "false"}, 
+        React.createElement("span", {className: "sr-only"}, "Toggle navigation"), 
+        React.createElement("span", {className: "icon-bar"}), 
+        React.createElement("span", {className: "icon-bar"}), 
+        React.createElement("span", {className: "icon-bar"})
+      ), 
+      React.createElement("a", {className: "navbar-brand", href: "#"}, "Brand")
+    ), 
+     
+    React.createElement("div", {className: "collapse navbar-collapse", id: "bs-example-navbar-collapse-1"}, 
+      React.createElement("ul", {className: "nav navbar-nav"}, 
+        React.createElement("li", {className: "active"}, React.createElement("a", {href: "#"}, "Link"))
+
+      ), 
+      React.createElement("form", {className: "navbar-form navbar-left", role: "search"}, 
+        React.createElement("div", {className: "form-group"}, 
+          React.createElement("input", {type: "text", className: "form-control", placeholder: "Search"})
+        ), 
+        React.createElement("button", {type: "submit", className: "btn btn-default"}, "Submit")
+      ), 
+      React.createElement("ul", {className: "nav navbar-nav navbar-right"}, 
+        React.createElement("li", null, React.createElement("a", {href: "#"}, "Link")), 
+        React.createElement("li", {className: "dropdown"}, 
+          React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false"}, "Dropdown ", React.createElement("span", {className: "caret"})), 
+          React.createElement("ul", {className: "dropdown-menu"}, 
+            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
+            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
+            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
+            React.createElement("li", {role: "separator", className: "divider"}), 
+            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
+          )
+        )
+      )
+    )
+  )
 		); 
 	}
 	
 });
 	
-module.exports = App;
+module.exports = Dashboard;
 },{"react":160}],2:[function(require,module,exports){
 var React = require('react');
 var ReactDOM = require('react-dom');
-var App = require('./Dashboard/App'); 
-ReactDOM.render(React.createElement(App, null), document.getElementById("app"));  
-},{"./Dashboard/App":1,"react":160,"react-dom":31}],3:[function(require,module,exports){
+var Dashboard = require('./Dashboard/Dashboard');
+
+
+
+
+
+ReactDOM.render(React.createElement(Dashboard, null), document.getElementById("app"));  
+},{"./Dashboard/Dashboard":1,"react":160,"react-dom":31}],3:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
