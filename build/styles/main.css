@@ -13147,13 +13147,32 @@ body {
 #Dashboard .Header {
   background: #fff; }
 
-#Dashboard .Menu {
-  width: 200px;
-  background: #fff; }
+#Dashboard .navbar {
+  margin-bottom: 0; }
+  #Dashboard .navbar .navbar-toggle {
+    float: left;
+    margin-left: 15px;
+    display: block; }
+  #Dashboard .navbar .navbar-brand {
+    text-align: center; }
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #Dashboard .navbar .navbar-toggle {
+    float: right; }
+  #Dashboard .navbar .navbar-brand {
+    width: 180px;
+    background: #fff; }
+  #Dashboard .navbar .Menu {
+    width: 180px;
+    background: #fff; }
+  #Dashboard .navbar form {
+    margin: 0; }
+    #Dashboard .navbar form input {
+      min-height: 50px;
+      border-radius: 0;
+      border: none; } }
+
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 /* Extra small devices (phones, less than 768px) */
