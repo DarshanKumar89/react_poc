@@ -32,9 +32,9 @@ gulp.task('html', function() {
 
 
 /*FONTS*/
-gulp.task('fonts', function() {
+gulp.task('fonts', function() { 
     gulp.src('fonts/*.*')
-        .pipe(gulp.dest('../build/fonts/'))
+        .pipe(gulp.dest('../build/fonts/bootstrap/'))
         .pipe(connect.reload());
 });
 
@@ -80,7 +80,7 @@ return browserify('components/main.js')
 .bundle()
 .pipe(source('bundle.js'))
 .pipe(gulp.dest('../build/scripts/'))
-.pipe(connect.reload());
+.pipe(connect.reload()); 
 });
  
 
@@ -88,7 +88,7 @@ return browserify('components/main.js')
 /*WATCH*/
 gulp.task('watch', function() {
     gulp.watch('*.html', ['html']);
-    gulp.watch('fonts/*.*', ['fonts']);
+    gulp.watch('fonts/**/*.*', ['fonts']);
     gulp.watch('images/*.*', ['images']);
     gulp.watch('styles/**/*.scss', ['sass']);
     gulp.watch('components/**/*.js', ['js']);

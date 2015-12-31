@@ -54,22 +54,27 @@ var Header = React.createClass({displayName: "Header",
       ), 
       React.createElement("form", {className: "navbar-form navbar-left", role: "search"}, 
         React.createElement("div", {className: "form-group"}, 
-          React.createElement("input", {type: "text", className: "form-control", placeholder: "Search"})
+          React.createElement("input", {type: "text", className: "form-control", placeholder: "Search something special"})
         )
         /*<button type="submit" className="btn btn-default">Submit</button>*/
       ), 
       React.createElement("ul", {className: "nav navbar-nav navbar-right"}, 
-        React.createElement("li", null, React.createElement("a", {href: "#"}, "Link")), 
-        React.createElement("li", {className: "dropdown"}, 
-          React.createElement("a", {href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false"}, "Dropdown ", React.createElement("span", {className: "caret"})), 
-          React.createElement("ul", {className: "dropdown-menu"}, 
-            React.createElement("li", null, React.createElement("a", {href: "#"}, "Action")), 
-            React.createElement("li", null, React.createElement("a", {href: "#"}, "Another action")), 
-            React.createElement("li", null, React.createElement("a", {href: "#"}, "Something else here")), 
-            React.createElement("li", {role: "separator", className: "divider"}), 
-            React.createElement("li", null, React.createElement("a", {href: "#"}, "Separated link"))
-          )
-        )
+        React.createElement("li", null, React.createElement("a", {className: "dropdown-toggle", href: "#", "data-toggle": "dropdown", "aria-expanded": "false"}, 
+                       React.createElement("span", {className: "glyphicon glyphicon-volume-up", "aria-hidden": "true"})
+                    )), 
+   React.createElement("li", null, React.createElement("a", {className: "dropdown-toggle", href: "#", "data-toggle": "dropdown", "aria-expanded": "false"}, 
+                       React.createElement("span", {className: "glyphicon glyphicon-th", "aria-hidden": "true"})
+                    )), 
+                    React.createElement("li", null, React.createElement("a", {className: "dropdown-toggle", href: "#", "data-toggle": "dropdown", "aria-expanded": "false"}, 
+                       React.createElement("span", {className: "glyphicon glyphicon-envelope", "aria-hidden": "true"})
+                    )), 
+                    React.createElement("li", null, React.createElement("a", {className: "dropdown-toggle", href: "#", "data-toggle": "dropdown", "aria-expanded": "false"}, 
+                       React.createElement("span", {className: "glyphicon glyphicon-list-alt", "aria-hidden": "true"})
+                    )), 
+                    React.createElement("li", null, React.createElement("a", {className: "dropdown-toggle", href: "#", "data-toggle": "dropdown", "aria-expanded": "false"}, 
+                       React.createElement("span", {className: "glyphicon glyphicon-cog", "aria-hidden": "true"})
+                    ))
+ 
       )
     )
   )
@@ -80,21 +85,32 @@ var Header = React.createClass({displayName: "Header",
 	
 module.exports = Header;
 },{"react":164}],3:[function(require,module,exports){
-var React = require('react');
+var React = require('react'); 
 
 var Menu = React.createClass({displayName: "Menu",
 	render: function() {  
 		return (
       React.createElement("div", {className: "Menu"}, 
+         React.createElement("div", {className: "profile-picture"}, 
+          React.createElement("img", {className: "img-circle", src: "images/profile.jpg"})
+         ), 
         React.createElement("div", null, 
           React.createElement("ul", null, 
-            React.createElement("li", null, "1"), 
-            React.createElement("li", null, "1"), 
-            React.createElement("li", null, "1"), 
-            React.createElement("li", null, "1"), 
-            React.createElement("li", null, "1"), 
-            React.createElement("li", null, "1"), 
-            React.createElement("li", null, "1")
+          React.createElement("li", null, "DASHBOARD"), 
+          React.createElement("li", null, "ANALYTICS"), 
+          React.createElement("li", null, "INTERFACE"), 
+          React.createElement("li", null, "APP VIEWS"), 
+          React.createElement("li", null, "CHARTS"), 
+          React.createElement("li", null, "BOX TRANSITIONS"), 
+          React.createElement("li", null, "COMMON VIEWS"), 
+          React.createElement("li", null, "TABLES"), 
+          React.createElement("li", null, "WIDGETS"), 
+          React.createElement("li", null, "FORMS"), 
+          React.createElement("li", null, "LAYOUT OPTIONS"), 
+          React.createElement("li", null, "GRID SYSTEM"), 
+          React.createElement("li", null, "LANDING PAGE"), 
+          React.createElement("li", null, "ANGULARJS VERSION"), 
+          React.createElement("li", null, "METEOR VERSION  ")
           )
 
         )

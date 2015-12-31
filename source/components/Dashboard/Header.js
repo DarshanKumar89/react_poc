@@ -35,22 +35,27 @@ var Header = React.createClass({
       </ul>
       <form className="navbar-form navbar-left" role="search">
         <div className="form-group">
-          <input type="text" className="form-control" placeholder="Search"/>
+          <input type="text" className="form-control" placeholder="Search something special"/>
         </div>
         { /*<button type="submit" className="btn btn-default">Submit</button>*/}  
       </form>
       <ul className="nav navbar-nav navbar-right"> 
-        <li><a href="#">Link</a></li>
-        <li className="dropdown">
-          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
-          <ul className="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" className="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><a className="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                       <span className="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                    </a></li>
+   <li><a className="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                       <span className="glyphicon glyphicon-th" aria-hidden="true"></span>
+                    </a></li>
+                    <li><a className="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                       <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </a></li>
+                    <li><a className="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                       <span className="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                    </a></li>
+                    <li><a className="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                       <span className="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a></li>
+ 
       </ul>
     </div>
   </div>
