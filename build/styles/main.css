@@ -13172,6 +13172,51 @@ button.close {
       padding: 20px;
       position: relative; }
 
+#Dashboard {
+  background: #F1F3F6; }
+  #Dashboard .navbar {
+    border-top: none;
+    background: #fff;
+    margin-bottom: 0; }
+    #Dashboard .navbar .navbar-toggle {
+      float: left;
+      margin-left: 15px;
+      display: block; }
+    #Dashboard .navbar .navbar-brand {
+      text-align: center; }
+  #Dashboard .Menu {
+    width: 180px;
+    background: #fff;
+    border-right: 1px solid #D7D7D7; }
+    #Dashboard .Menu ul {
+      padding: 0; }
+      #Dashboard .Menu ul li {
+        list-style-type: none;
+        border-bottom: 1px solid #ccc;
+        padding: 15px;
+        vertical-align: center; }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #Dashboard .navbar .navbar-toggle {
+    float: right; }
+  #Dashboard .navbar .navbar-brand {
+    width: 180px;
+    background: #fff; }
+  #Dashboard .navbar form {
+    margin: 0; }
+    #Dashboard .navbar form input {
+      min-height: 50px;
+      border-radius: 0;
+      border: none; }
+  #Dashboard .profile-picture {
+    padding: 20px 0; }
+    #Dashboard .profile-picture img {
+      display: block;
+      margin: 0 auto; } }
+
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: #FFF;
@@ -13188,33 +13233,7 @@ body {
   background: #F7F9FA linear-gradient(to right, #34495E, #34495E 25%, #9B59B6 25%, #9B59B6 35%, #3498DB 35%, #3498DB 45%, #62CB31 45%, #62CB31 55%, #FFB606 55%, #FFB606 65%, #E67E22 65%, #E67E22 75%, #E74C3C 85%, #E74C3C 85%, #C0392B 85%, #C0392B 100%) no-repeat scroll 50% 100%/100% 6px;
   height: 6px; }
 
-<<<<<<< HEAD
-=======
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
-body {
-  background: #F1F3F6; }
+.img-circle {
+  border-radius: 50%; }
 
-#Dashboard .Header {
-  background: #fff; }
-
-#Dashboard .Menu {
-  width: 200px;
-  background: #fff; }
-
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
-
->>>>>>> 2cd7d780efba972f6b0b2305430d27501c98872c
 /*# sourceMappingURL=maps/main.css.map */

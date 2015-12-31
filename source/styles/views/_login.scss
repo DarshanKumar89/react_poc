@@ -2,39 +2,25 @@
     max-width: 420px;
     margin: auto;
     padding-top: 6%;
-
-    .m-b-md{
-    	margin-bottom: 20px;
+    .m-b-md {
+        margin-bottom: 20px;
     }
-
-
-    .hpanel{
-    	box-shadow: none;
-		margin-bottom: 25px;
-		border: medium none;
-
-		.panel-body {
-		    background: #FFF none repeat scroll 0% 0%;
-		    border: 1px solid #E4E5E7;
-		    border-radius: 2px;
-		    padding: 20px;
-		    position: relative;
-		}
+    .hpanel {
+        box-shadow: none;
+        margin-bottom: 25px;
+        border: medium none;
+        .panel-body {
+            background: #FFF none repeat scroll 0% 0%;
+            border: 1px solid #E4E5E7;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+        }
     }
-
     /* Small devices (tablets, 768px and up) */
-	@media (min-width: $screen-sm-min) {
-	  
-	}
-
-	/* Medium devices (desktops, 992px and up) */
-	@media (min-width: $screen-md-min) {
-	    
-	}
-
-	/* Large devices (large desktops, 1200px and up) */
-	@media (min-width: $screen-lg-min) {
-	   
-	}
-
+    @media (min-width: $screen-sm-min) {}
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: $screen-md-min) {}
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: $screen-lg-min) {}
 }
