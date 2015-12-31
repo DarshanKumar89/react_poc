@@ -1,0 +1,18 @@
+body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #FFF;
+    font-size: 13px;
+    color: #6A6C6F;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.blank {
+    background-color: #F1F3F6;
+}
+
+.color-line {
+    background: #F7F9FA linear-gradient(to right, #34495E, #34495E 25%, #9B59B6 25%, #9B59B6 35%, #3498DB 35%, #3498DB 45%, #62CB31 45%, #62CB31 55%, #FFB606 55%, #FFB606 65%, #E67E22 65%, #E67E22 75%, #E74C3C 85%, #E74C3C 85%, #C0392B 85%, #C0392B 100%) no-repeat scroll 50% 100% / 100% 6px;
+    height: 6px;
+}
