@@ -1,11 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Dashboard = require('./Dashboard/Dashboard');
-var Login = require('./Login/Login');
-var Register = require('./Register/Register');
-var $ = jQuery = require('jquery');
-var BootstrapJS = require('./External/bootstrap.min');
+var Routes = require('./routes');
+
+ReactDOM.render(<Routes/>, document.getElementById("app"));
+            
 
 
-ReactDOM.render(<Login/>, document.getElementById("app"));
