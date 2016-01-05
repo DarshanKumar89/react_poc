@@ -11,7 +11,7 @@ var App = require('./common/App');
 var NotFound = require('./common/NotFound');
 var Dashboard = require('./Dashboard/Dashboard');
 var Login = require('./Login/Login');
-var Register = require('./Register/Register');
+var Register = require('./Register/Register'); 
 
 
 var Routes = React.createClass({

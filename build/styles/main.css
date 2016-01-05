@@ -13175,7 +13175,6 @@ button.close {
 #Dashboard {
   background: #F1F3F6; }
   #Dashboard .navbar {
-    border-top: none;
     background: #fff;
     margin-bottom: 0; }
     #Dashboard .navbar .navbar-toggle {
@@ -13185,6 +13184,7 @@ button.close {
     #Dashboard .navbar .navbar-brand {
       text-align: center; }
   #Dashboard .Menu {
+    float: left;
     width: 180px;
     background: #fff;
     border-right: 1px solid #D7D7D7; }
@@ -13195,6 +13195,12 @@ button.close {
         border-bottom: 1px solid #ccc;
         padding: 15px;
         vertical-align: center; }
+  #Dashboard .lineGraph {
+    border: 1px solid #AAC7D7;
+    width: auto;
+    background: #fff;
+    margin: 25px;
+    padding: 25px; }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {

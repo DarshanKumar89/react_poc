@@ -13,6 +13,7 @@
         }
     }
     .Menu {
+        float:left;
         width: 180px;
         background: $white;
         border-right: 1px solid $Light-Grey;
@@ -24,6 +25,16 @@
                 padding: 15px;
                 vertical-align: center;
             }
+        }
+    }
+    .lineGraph{
+        border:1px solid #AAC7D7;
+        width: auto;
+        background: #fff;
+        margin: 25px;
+        padding:25px;
+        .graph{
+
         }
     }
 }

@@ -80,7 +80,7 @@ var Login = React.createClass({
 					              	<div>
 		                            	<input type="submit" value="Login" 
 		                            		className="btn btn-success btn-block" />
-		                            	<a className="btn btn-default btn-block">Register</a>
+		                            	<a className="btn btn-default btn-block" href="/#/register">Register</a>
 		                            </div>
 
 					              
