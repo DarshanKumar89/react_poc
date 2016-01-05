@@ -414,10 +414,10 @@ var lineGraph = React.createClass({displayName: "lineGraph",
 		return (
       React.createElement("div", {className: "graph"}, 
         React.createElement("canvas", {id: "canvas", className: "col-md-4"}), 
-		React.createElement("div", {className: "col-md-3 text-center"}, 
+		React.createElement("div", {className: "col-md-4 text-center"}, 
 
 			React.createElement("div", {className: "small"}, 
-				React.createElement("i", {className: "fa fa-clock-o"}), " Active duration"
+				React.createElement("span", {className: "glyphicon glyphicon-time"}), " Active duration"
 			), 
 
 			React.createElement("div", null, 
@@ -426,7 +426,7 @@ var lineGraph = React.createClass({displayName: "lineGraph",
 			), 
 
 			React.createElement("div", {className: "small m-t-xl"}, 
-				React.createElement("i", {className: "fa fa-clock-o"}), " Last active in 12.10.2015"
+				React.createElement("span", {className: "glyphicon glyphicon-time"}), " Last active in 12.10.2015"
 			)
 
 		)

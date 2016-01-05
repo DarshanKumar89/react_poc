@@ -42,10 +42,10 @@ var lineGraph = React.createClass({
 		return (
       <div className="graph">
         <canvas id="canvas" className="col-md-4"></canvas>
-		<div className="col-md-3 text-center">
+		<div className="col-md-4 text-center">
 
 			<div className="small">
-				<i className="fa fa-clock-o"></i> Active duration
+				<span className="glyphicon glyphicon-time"></span> Active duration
 			</div>
 
 			<div>
@@ -54,7 +54,7 @@ var lineGraph = React.createClass({
 			</div>
 
 			<div className="small m-t-xl">
-				<i className="fa fa-clock-o"></i> Last active in 12.10.2015
+				<span className="glyphicon glyphicon-time"></span> Last active in 12.10.2015
 			</div>
 
 		</div>
