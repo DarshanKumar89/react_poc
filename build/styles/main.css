@@ -13196,11 +13196,31 @@ button.close {
         padding: 15px;
         vertical-align: center; }
   #Dashboard .lineGraph {
-    border: 1px solid #AAC7D7;
-    width: auto;
-    background: #fff;
-    margin: 25px;
-    padding: 25px; }
+    max-width: 800px; }
+    #Dashboard .lineGraph .graph {
+      width: 400px;
+      display: inline-block; }
+    #Dashboard .lineGraph .info {
+      display: inline-block;
+      width: 200px;
+      position: relative;
+      bottom: 40px; }
+  #Dashboard .Activity {
+    width: 400px; }
+    #Dashboard .Activity .glyphicon-star-empty {
+      font-size: 40px; }
+  #Dashboard .Listing tr {
+    border: 0;
+    height: 50px; }
+    #Dashboard .Listing tr td {
+      text-align: center;
+      padding: 0 20px; }
+    #Dashboard .Listing tr th {
+      text-align: center; }
+  #Dashboard .Listing tbody > tr:nth-child(odd) {
+    background: #E4EBEF; }
+  #Dashboard .Listing body {
+    background: #ccc; }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -13224,7 +13244,7 @@ button.close {
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 body {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #FFF;
   font-size: 13px;
   color: #6A6C6F;
@@ -13241,5 +13261,20 @@ body {
 
 .img-circle {
   border-radius: 50%; }
+
+.component-bg {
+  border: 1px solid #AAC7D7;
+  background: #fff;
+  min-height: 260px;
+  margin: 25px;
+  padding: 25px;
+  float: left; }
+
+.clearfix {
+  clear: both; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /*# sourceMappingURL=maps/main.css.map */

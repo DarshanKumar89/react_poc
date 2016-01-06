@@ -40,9 +40,11 @@ var lineGraph = React.createClass({
 	},
 	render: function() {  
 		return (
-      <div className="graph">
-        <canvas id="canvas" className="col-md-4"></canvas>
-		<div className="col-md-4 text-center">
+      <div>
+      	<div className="graph">
+        <canvas id="canvas"></canvas>
+        </div>
+		<div className="info text-center">
 
 			<div className="small">
 				<span className="glyphicon glyphicon-time"></span> Active duration
@@ -56,10 +58,7 @@ var lineGraph = React.createClass({
 			<div className="small m-t-xl">
 				<span className="glyphicon glyphicon-time"></span> Last active in 12.10.2015
 			</div>
-
 		</div>
-
-
       </div> 
     );  
 	}

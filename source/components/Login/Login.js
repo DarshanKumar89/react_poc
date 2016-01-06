@@ -51,7 +51,7 @@ var Login = React.createClass({
 		                                	value={this.state.user.username}
 		                                	name="username"
             								onChange={this.handleChange}
-		                                	className="form-control" />
+		                                	className="form-control" required/>
 		                                <span className="small">Your unique username to app</span>
 		                            </div>
 
@@ -63,7 +63,7 @@ var Login = React.createClass({
 		                                	value={this.state.user.password}
 		                                	name="password"
             								onChange={this.handleChange}
-		                                	className="form-control" />
+		                                	className="form-control" required/>
 		                                <span className="small">Your strong password</span>
 		                            </div>
 

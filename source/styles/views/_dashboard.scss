@@ -13,7 +13,7 @@
         }
     }
     .Menu {
-        float:left;
+        float: left;
         width: 180px;
         background: $white;
         border-right: 1px solid $Light-Grey;
@@ -27,14 +27,42 @@
             }
         }
     }
-    .lineGraph{
-        border:1px solid #AAC7D7;
-        width: auto;
-        background: #fff;
-        margin: 25px;
-        padding:25px;
-        .graph{
-
+    .lineGraph {
+        max-width: 800px;
+        .graph {
+            width: 400px;
+            display: inline-block;
+        }
+        .info {
+            display: inline-block;
+            width: 200px;
+            position: relative;
+            bottom: 40px;
+        }
+    }
+    .Activity {
+        width: 400px;
+        .glyphicon-star-empty {
+            font-size: 40px;
+        }
+    }
+    .Listing {
+        tr {
+            border: 0;
+            height: 50px;
+            td{
+                text-align: center;
+                padding: 0 20px;
+            }
+            th{
+                text-align: center;
+            }
+        }
+        tbody>tr:nth-child(odd) {
+            background: #E4EBEF;
+        }
+        body {
+            background: #ccc;
         }
     }
 }

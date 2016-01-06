@@ -1,19 +1,20 @@
 var React = require('react');
 var Header = require('./Header.js');
 var Menu = require('./Menu.js');
-var LineGraph = require('./../Widgets/lineGraph.js');
+var Activity = require('./Activity.js');
+var LineGraphWidget = require('./Widgets/lineGraphWidget.js');
+var Listing = require('./Listing.js');
 
 var Dashboard = React.createClass({
 	render: function() { 
 		return (
-			<div id="Dashboard">
+			<div id="Dashboard"> 
 				 <Header/>  
 				 <Menu/>
-				 <div className="lineGraph col-md-6">
-				 	<LineGraph/>
-				 </div>
-				
-			</div>  
+			 	<LineGraphWidget/>
+			 	<Activity/>
+			 	<Listing/>
+			</div>   
 		); 
 	}
 	
