@@ -5,6 +5,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var webpack = require('webpack-stream');
 var del = require('del');
+eslint = require('gulp-eslint');
+
 // set variwebpack: bundle is now VALID.able via $ gulp --type production
 var environment = plugins.util.env.type || 'development';
 var isProduction = environment === 'production';
@@ -63,13 +65,21 @@ gulp.task('components', function() {
       .pipe(connect.reload()); 
   });
 
-// copy html from src to dist
-gulp.task('html', function() {
-  return gulp.src(src + 'index.html')
-    .pipe(gulp.dest(dist))
-    .pipe(plugins.size({ title : 'html' }))
-    .pipe(plugins.connect.reload());
-});
+  // ESLint
+  gulp.task('lint', function () {
+    return gulp.src([src + 'scripts/**/*.js','!node_modules/**'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+  });
+
+  // copy html from src to dist
+  gulp.task('html', function() {
+    return gulp.src(src + 'index.html')
+      .pipe(gulp.dest(dist))
+      .pipe(plugins.size({ title : 'html' }))
+      .pipe(plugins.connect.reload());
+  });
 
 // add live-reload on the given port
 gulp.task('serve', function() {
