@@ -276,6 +276,9 @@ d.parent(".dropdown-menu").length&&(d=d.closest("li.dropdown").addClass("active"
 
 },{}],8:[function(require,module,exports){
 var React = require('react');
+var Router = require('react-router');
+var Route = require('react-router').Route;
+var Dashboard = require('./../Dashboard/Dashboard'); 
 
 var Login = React.createClass({displayName: "Login",
 
@@ -290,10 +293,10 @@ var Login = React.createClass({displayName: "Login",
 
     handleRememberMe: function(e){
     	this.state.rememberMe = !this.state.rememberMe; 
-    	this.setState({});	
+    	this.setState({});	 
     },
 
-    loginSubmit: function(e) { 
+    loginSubmit: function(e) {  
       e.preventDefault();
       var user = this.state.user;
       if (!user.username || !user.password) {
@@ -304,6 +307,8 @@ var Login = React.createClass({displayName: "Login",
       console.log(user);
       this.state.user = {};
       this.setState({});
+      window.location.hash ="#/dashboard";
+    	React.createElement(Route, {path: "dashboard", component: Dashboard}) 
     },
 	
 	render: function() { 
@@ -383,7 +388,7 @@ var Login = React.createClass({displayName: "Login",
 });
 	
 module.exports = Login;
-},{"react":219}],9:[function(require,module,exports){
+},{"./../Dashboard/Dashboard":2,"react":219,"react-router":86}],9:[function(require,module,exports){
 var React = require('react');
 
 var Register = React.createClass({displayName: "Register",
