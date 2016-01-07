@@ -58,7 +58,6 @@ var Listing = React.createClass({
 	},
 	
 	eachProj:function(data, i){
-		console.log(data) 
 		return(<Table key={i} date={data.data.date} task={data.data.task} info={data.data.info}/>)
 	},
 	render: function(){

@@ -1,0 +1,55 @@
+{
+  "name": "poc",
+  "version": "0.0.1",
+  "description": "simple poc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/debashish4/react_poc.git"
+  },
+  "scripts": {
+    "start": "gulp build; node dev.server.js"
+  },
+  "author": "Debashish Sahoo",
+  "license": "ISC",
+  "devDependencies": {
+    "array-find": "^1.0.0",
+    "babel-core": "^6.3.15",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-react-transform": "^2.0.0-beta1",
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-runtime": "^6.3.13",
+    "del": "^2.2.0",
+    "file-loader": "^0.8.5",
+    "glob": "^6.0.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "react-hot-loader": "^1.3.0",
+    "react-transform-hmr": "^1.0.1",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-stream": "^3.1.0"
+  },
+  "dependencies": {
+    "chart.js": "^1.0.2",
+    "history": "^1.17.0",
+    "jquery": "^2.1.4",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

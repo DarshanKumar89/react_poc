@@ -1,4 +1,7 @@
 var React = require('react');
+var Router = require('react-router');
+var Route = require('react-router').Route;
+var Dashboard = require('./../Dashboard/Dashboard'); 
 
 var Login = React.createClass({
 
@@ -13,10 +16,10 @@ var Login = React.createClass({
 
     handleRememberMe: function(e){
     	this.state.rememberMe = !this.state.rememberMe; 
-    	this.setState({});	
+    	this.setState({});	 
     },
 
-    loginSubmit: function(e) { 
+    loginSubmit: function(e) {  
       e.preventDefault();
       var user = this.state.user;
       if (!user.username || !user.password) {
@@ -24,9 +27,9 @@ var Login = React.createClass({
       }
 
       // TODO: send request to the server
-      console.log(user);
       this.state.user = {};
       this.setState({});
+      window.location.hash ="dashboard";
     },
 	
 	render: function() { 

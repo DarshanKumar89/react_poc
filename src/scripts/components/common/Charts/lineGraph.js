@@ -34,7 +34,7 @@ var lineGraph = React.createClass({
 
 		};
 		var ctx = document.getElementById("canvas").getContext("2d");
-		myLine = new Chart(ctx).Line(lineChartData, {
+		var myLine = new Chart(ctx).Line(lineChartData, {
 			responsive: true
 		});
 	},

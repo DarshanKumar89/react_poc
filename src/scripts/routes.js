@@ -4,21 +4,21 @@ var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var IndexRoute = require('react-router').IndexRoute;
 
-var $ = jQuery = require('jquery');
-var BootstrapJS = require('./External/bootstrap.min');
+window.jQuery = window.$ = require('jquery');
+var BootstrapJS = require('./components/External/bootstrap.min');
 
-var App = require('./common/App');
-var NotFound = require('./common/NotFound');
-var Dashboard = require('./Dashboard/Dashboard');
-var Login = require('./Login/Login');
-var Register = require('./Register/Register'); 
+var AppContainer = require('./components/common/AppContainer');
+var NotFound = require('./components/common/NotFound');
+var Dashboard = require('./components/Dashboard/Dashboard');
+var Login = require('./components/Login/Login');
+var Register = require('./components/Register/Register'); 
 
 
 var Routes = React.createClass({
   render: function() { 
     return (
       <Router history={browserHistory}>
-        <Route path="/" component={App}>
+        <Route path="/" component={AppContainer}>
           <IndexRoute component={Login} />
           <Route path="register" component={Register} />
           <Route path="dashboard" component={Dashboard} />

@@ -1,6 +1,6 @@
 var React = require('react');
 
-var App = React.createClass({
+var AppContainer = React.createClass({
     render: function() {
       return (
       	<div>
@@ -10,4 +10,4 @@ var App = React.createClass({
     }
 });
 
-module.exports = App;
+module.exports = AppContainer;
