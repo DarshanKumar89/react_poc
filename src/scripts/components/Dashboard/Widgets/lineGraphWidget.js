@@ -1,6 +1,5 @@
-var React = require('react');
-var Chart = require('chart.js'); 
-var LineGraph = require('./../../common/Charts/lineGraph.js'); 
+import React from 'react';
+import LineGraph from './../../common/Charts/lineGraph.js'; 
 
 
 

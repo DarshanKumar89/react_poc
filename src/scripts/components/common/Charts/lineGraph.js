@@ -1,15 +1,15 @@
-var React = require('react');
-var Chart = require('chart.js'); 
+import React from 'react';
+import Chart from 'chart.js'; 
 
 
 
-var lineGraph = React.createClass({
-		componentWillMount: function(){},
-		componentDidMount: function(){
-		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
-		var lineChartData = {
-			labels : ["January","February","March","April","May","June","July"],
-			datasets : [
+export default class LineGraph extends React.Component {
+
+		componentDidMount () {
+			var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+			var lineChartData = {
+				labels : ["January","February","March","April","May","June","July"],
+				datasets : [
 				{
 					label: "My First dataset",
 					fillColor : "rgba(220,220,220,0.2)",
@@ -37,8 +37,9 @@ var lineGraph = React.createClass({
 		var myLine = new Chart(ctx).Line(lineChartData, {
 			responsive: true
 		});
-	},
-	render: function() {  
+	}
+
+	render () {  
 		return (
       <div>
       	<div className="graph">
@@ -62,9 +63,7 @@ var lineGraph = React.createClass({
       </div> 
     );  
 	}
-});
-
-module.exports = lineGraph;
+}
 
 
 
