@@ -93,9 +93,9 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('fonts/**/*.*', ['fonts']);
-  gulp.watch('images/*.*', ['images']);
-  gulp.watch('styles/**/*.scss', ['sass']);
+  gulp.watch(src + 'fonts/**/*.*', ['fonts']);
+  gulp.watch(src + 'images/*.*', ['images']);
+  gulp.watch(src + 'styles/**/*.scss', ['sass']);
   gulp.watch(src + 'index.html', ['html']);
   gulp.watch(src + 'scripts/**/*.js', ['components']);
   gulp.watch(src + 'main.js', ['components']);
