@@ -43,7 +43,7 @@ var Listing = React.createClass({
 				    <td><strong>{obj.task}</strong></td>
 				    <td>{obj.date}</td>
 			    	<td>
-			    		<a><i className="glyphicon glyphicon-check text-navy"></i></a>
+			    		<a><i className="fa fa-check text-navy"></i></a>
 				    </td>
                 </tr>
 			)
@@ -52,7 +52,7 @@ var Listing = React.createClass({
 			<div className="hpanel">
                 <div className="panel-heading">
                     <div className="panel-tools">
-                        <a className="showhide"><i className="glyphicon glyphicon-chevron-up"></i></a>
+                        <a className="showhide"><i className="fa fa-chevron-up"></i></a>
                         <a className="closebox"><i className="glyphicon glyphicon"></i></a>
                     </div>
                     Recently active projects

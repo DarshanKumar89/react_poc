@@ -8,7 +8,7 @@ var InfoWidgets = React.createClass({
                     <div  className="col-lg-3">
                         <div className="hpanel">
                             <div className="panel-body text-center h-200">
-                                <i className="glyphicon glyphicon-usd" style={{"fontSize" : "40px"}}></i>
+                                <i className="fa fa-bank fa-3x"></i>
 
                                 <h1 className="m-xs">$1 206,90</h1>
 
@@ -29,7 +29,7 @@ var InfoWidgets = React.createClass({
                                     <h4>Users Activity</h4>
                                 </div>
                                 <div className="stats-icon pull-right">
-                                    <i className="glyphicon glyphicon-leaf" style={{"fontSize" : "40px"}}></i>
+                                    <i className="fa fa-leaf fa-5x"></i>
                                 </div>
                                 <div className="m-t-xl">
                                     <h3 className="m-b-xs">210</h3>
@@ -62,7 +62,7 @@ var InfoWidgets = React.createClass({
                                     <h4>Page Views</h4>
                                 </div>
                                 <div className="stats-icon pull-right">
-                                    <i className="glyphicon glyphicon-queen" style={{"fontSize" : "40px"}}></i>
+                                    <i className="fa fa-cubes fa-5x"></i>
                                 </div>
                                 <div className="m-t-xl">
                                     <h1 className="text-success">860k+</h1>
@@ -88,7 +88,7 @@ var InfoWidgets = React.createClass({
                                     <h4>Today income</h4>
                                 </div>
                                 <div className="stats-icon pull-right">
-                                    <i className="glyphicon glyphicon-gift" style={{"fontSize" : "40px"}}></i>
+                                    <i className="fa fa-gift fa-5x"></i>
                                 </div>
                                 <div className="clearfix"></div>
                                 <div className="flot-chart">
@@ -102,7 +102,7 @@ var InfoWidgets = React.createClass({
                                         </div>
                                         <div  className="col-xs-7">
                                             <small className="stat-label">Last week</small>
-                                            <h4>$7 980,60 <i className="glyphicon glyphicon-arrow-up text-success"></i></h4>
+                                            <h4>$7 980,60 <i className="fa fa-arrow-up text-success"></i></h4>
                                         </div>
                                     </div>
                                 </div>
