@@ -1,10 +1,8 @@
 import React from 'react';
 import LineGraph from './../../common/Charts/LineGraph'; 
 
-
-
-var LineGraphWidget = React.createClass({
-	render: function() { 
+export default class LineGraphWidget extends React.Component {
+	render () { 
 		return (
 			<div>
 				<div className="row">
@@ -68,9 +66,7 @@ var LineGraphWidget = React.createClass({
 		); 
 	}
 	
-});
-	
-module.exports = LineGraphWidget;
+}
 
 
 

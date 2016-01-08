@@ -23,12 +23,16 @@ var ArrayData = [{
 }];
 
 
-var Listing = React.createClass({
-	getInitialState:function(){
-		return{tableData: ArrayData}
-	},
-	
-	render: function(){
+export default class Listing extends React.Component {
+
+    constructor (props) { 
+        super(props);
+        this.state = {
+            tableData: ArrayData
+        };
+    }
+
+	render () {
 		var tableBody = this.state.tableData.map(function(obj, i){
 			return(
 				<tr key={i}>
@@ -77,7 +81,4 @@ var Listing = React.createClass({
             </div>
 		)
 	}
-});
-
-
-module.exports = Listing;
+}

@@ -1,25 +1,30 @@
 import React from 'react';
 
-var Register = React.createClass({
+export default class Register extends React.Component {
 
-	getInitialState: function() {
-      return {user:{}, newsletter: false};
-    },
+	constructor (props) { 
+		super(props);
+		this.state = {
+      user:{}, 
+      newsletter: false
+    };
 
-    handleChange: function(e) {
+    this.handleChange = this.handleChange.bind(this);
+    this.handleNewsLetter = this.handleNewsLetter.bind(this);
+    this.registerSubmit = this.registerSubmit.bind(this);
+  }
 
-
-
+    handleChange (e) {
     	this.state.user[e.target.name] = e.target.value; 
     	this.setState({});
-    },
+    }
 
-    handleNewsLetter: function(e){
+    handleNewsLetter (e){
     	this.state.newsletter = !this.state.newsletter; 
     	this.setState({});	
-    },
+    }
 
-    registerSubmit: function(e) { 
+    registerSubmit (e) { 
       e.preventDefault();
       var user = this.state.user;
 
@@ -36,17 +41,15 @@ var Register = React.createClass({
         alert("Please make sure that password are same!!!");
         return;
       }
-
-
       
       // TODO: send request to the server
       console.log(user);
       this.state.user = {};
       this.setState({});
       window.location.hash ="thanks";
-    },
+    }
 	
-	render: function() { 
+	render () { 
 		return (
 			<div>
 				<div className="color-line"></div>
@@ -140,6 +143,4 @@ var Register = React.createClass({
 		); 
 	}
 	
-});
-	
-module.exports = Register;
+}

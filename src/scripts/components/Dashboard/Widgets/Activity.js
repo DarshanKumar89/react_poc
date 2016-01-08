@@ -1,7 +1,7 @@
 import React from 'react';
 
-var Activity = React.createClass({
-    render: function() {
+export default class Activity extends React.Component {
+    render () {
         return ( 
             <div className="hpanel stats">
                 <div className="panel-heading">
@@ -60,6 +60,4 @@ var Activity = React.createClass({
             </div>   
         );
     }
-});
-
-module.exports = Activity;
+}

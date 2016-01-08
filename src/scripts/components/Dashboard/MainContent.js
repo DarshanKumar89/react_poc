@@ -1,4 +1,5 @@
 import React from 'react';
+
 import WelcomeRow from './Widgets/WelcomeWidget';
 import LineGraphWidget from './Widgets/LineGraphWidget';
 import InfoWidgets from './Widgets/InfoWidgets';
@@ -7,8 +8,8 @@ import Listing from './Widgets/Listing';
 import TableWidget from './Widgets/TableWidget';
 import Footer from './Widgets/Footer';
 
-var MainContent = React.createClass({
-    render: function() {
+export default class MainContent extends React.Component {
+    render () {
         return ( 
         	<div>
         		<div id="wrapper">
@@ -33,6 +34,4 @@ var MainContent = React.createClass({
         	</div>   
         );
     }
-});
-
-module.exports = MainContent;
+}

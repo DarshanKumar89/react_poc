@@ -1,7 +1,7 @@
 import React from 'react'; 
 
-var Menu = React.createClass({
-	render: function() {  
+export default class Menu extends React.Component {
+	render () {  
 		return (
       <div>
         <aside id="menu">
@@ -108,6 +108,4 @@ var Menu = React.createClass({
 
     );  
 	}
-});
-	
-module.exports = Menu;
+}

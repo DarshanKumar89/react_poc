@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-var NotFound = React.createClass({
-	render: function() { 
+export default class NotFound extends React.Component {
+	render () { 
 		return (
 			<div>
 				<div className="not-found">
@@ -17,6 +17,4 @@ var NotFound = React.createClass({
 			</div>
 		); 
 	}
-});
-
-module.exports = NotFound;
+}

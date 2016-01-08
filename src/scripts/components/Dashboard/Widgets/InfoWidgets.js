@@ -1,7 +1,7 @@
 import React from 'react';
 
-var InfoWidgets = React.createClass({
-    render: function() {
+export default class InfoWidgets extends React.Component {
+    render () {
         return ( 
         	<div>
                 <div className="row">
@@ -116,6 +116,4 @@ var InfoWidgets = React.createClass({
         	</div>   
         );
     }
-});
-
-module.exports = InfoWidgets;
+}

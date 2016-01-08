@@ -11,8 +11,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register'; 
 
-var Routes = React.createClass({
-  render: function() { 
+export default class Routes extends React.Component {
+  render () { 
     return (
       <Router history={browserHistory}>
         <Route path="/" component={AppContainer}>
@@ -27,6 +27,5 @@ var Routes = React.createClass({
       
     );
   }
-});
+}
 
-module.exports = Routes;

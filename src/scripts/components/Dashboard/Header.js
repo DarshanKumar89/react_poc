@@ -1,7 +1,7 @@
 import React from 'react';
 
-var Header = React.createClass({
-	render: function() {  
+export default class Header extends React.Component {
+	render () {  
 		return (
       <div id="header">
             <div className="color-line"></div>
@@ -168,6 +168,4 @@ var Header = React.createClass({
     );  
 	}
 	
-});
-	
-module.exports = Header;
+}

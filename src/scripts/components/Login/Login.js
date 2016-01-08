@@ -1,23 +1,32 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
 
-var Login = React.createClass({
+export default class Login extends React.Component {
 
-	getInitialState: function() {
-      return {user:{}, rememberMe: false};
-    },
+	constructor (props) { 
+		super(props);
+		this.state = {
+      user:{}, 
+      rememberMe: false
+    };
 
-    handleChange: function(e) {
+    this.handleChange = this.handleChange.bind(this);
+    this.handleRememberMe = this.handleRememberMe.bind(this);
+    this.loginSubmit = this.loginSubmit.bind(this);
+  }
+
+
+    handleChange (e) {
     	this.state.user[e.target.name] = e.target.value; 
     	this.setState({});
-    },
+    }
 
-    handleRememberMe: function(e){
+    handleRememberMe (e){
     	this.state.rememberMe = !this.state.rememberMe; 
     	this.setState({});	 
-    },
+    }
 
-    loginSubmit: function(e) {  
+    loginSubmit (e) {  
       e.preventDefault();
       var user = this.state.user;
       if (!user.username || !user.password) {
@@ -28,9 +37,9 @@ var Login = React.createClass({
       this.state.user = {};
       this.setState({});
       window.location.hash ="dashboard";
-    },
+    }
 	
-	render: function() { 
+	render () { 
 		return (
 			<div>
 				<div className="color-line"></div>
@@ -105,6 +114,4 @@ var Login = React.createClass({
 		); 
 	}
 	
-});
-	
-module.exports = Login;
+}

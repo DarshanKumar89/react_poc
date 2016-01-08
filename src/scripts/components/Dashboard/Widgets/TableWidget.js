@@ -1,7 +1,7 @@
 import React from 'react';
 
-var TableWidget = React.createClass({
-    render: function() {
+export default class TableWidget extends React.Component {
+    render () {
         return ( 
             <div className="hpanel">
                 <div className="panel-heading">
@@ -46,6 +46,4 @@ var TableWidget = React.createClass({
             </div>   
         );
     }
-});
-
-module.exports = TableWidget;
+}

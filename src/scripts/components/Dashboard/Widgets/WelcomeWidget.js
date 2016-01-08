@@ -1,7 +1,7 @@
 import React from 'react';
 
-var WelcomeWidget = React.createClass({
-    render: function() {
+export default class WelcomeWidget extends React.Component {
+    render () {
         return ( 
         	<div>
 		      	<div className="row">
@@ -16,7 +16,5 @@ var WelcomeWidget = React.createClass({
 		    </div>   
         );
     }
-});
-
-module.exports = WelcomeWidget;
+}
 

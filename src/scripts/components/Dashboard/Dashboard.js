@@ -3,8 +3,8 @@ import TopHeader from './Header';
 import LeftMenu from './Menu';
 import MainContent from './MainContent';
 
-var Dashboard = React.createClass({
-    render: function() {
+export default class Dashboard extends React.Component {
+    render () {
         return ( 
         	<div>
         		<TopHeader/>
@@ -13,6 +13,4 @@ var Dashboard = React.createClass({
         	</div>   
         );
     }
-});
-
-module.exports = Dashboard;
+}

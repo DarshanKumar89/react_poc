@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-var ThankYou = React.createClass({
-	render: function() { 
+export default class ThankYou extends React.Component {
+	render () { 
 		return (
 			<div>
 				<section className="thank-you">
@@ -18,6 +18,4 @@ var ThankYou = React.createClass({
 			</div>
 		); 
 	}
-});
-
-module.exports = ThankYou;
+}
