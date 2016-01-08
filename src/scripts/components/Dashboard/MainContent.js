@@ -1,11 +1,11 @@
-var React = require('react');
-var WelcomeRow = require('./Widgets/WelcomeWidget');
-var LineGraphWidget = require('./Widgets/LineGraphWidget');
-var InfoWidgets = require('./Widgets/InfoWidgets');
-var Footer = require('./Widgets/Footer');
-var Activity = require('./Widgets/Activity');
-var Listing = require('./Widgets/Listing');
-var TableWidget = require('./Widgets/TableWidget');
+import React from 'react';
+import WelcomeRow from './Widgets/WelcomeWidget';
+import LineGraphWidget from './Widgets/LineGraphWidget';
+import InfoWidgets from './Widgets/InfoWidgets';
+import Activity from './Widgets/Activity';
+import Listing from './Widgets/Listing';
+import TableWidget from './Widgets/TableWidget';
+import Footer from './Widgets/Footer';
 
 var MainContent = React.createClass({
     render: function() {

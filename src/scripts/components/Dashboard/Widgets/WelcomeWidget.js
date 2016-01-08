@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var MainContent = React.createClass({
+var WelcomeWidget = React.createClass({
     render: function() {
         return ( 
         	<div>
@@ -18,5 +18,5 @@ var MainContent = React.createClass({
     }
 });
 
-module.exports = MainContent;
+module.exports = WelcomeWidget;
 

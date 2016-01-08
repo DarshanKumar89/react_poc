@@ -1,7 +1,7 @@
-var React = require('react');
-var TopHeader = require('./Header.js');
-var LeftMenu = require('./Menu.js');
-var MainContent = require('./MainContent.js');
+import React from 'react';
+import TopHeader from './Header';
+import LeftMenu from './Menu';
+import MainContent from './MainContent';
 
 var Dashboard = React.createClass({
     render: function() {

@@ -1,7 +1,5 @@
-var React = require('react');
-var Router = require('react-router');
-var Route = require('react-router').Route;
-var Dashboard = require('./../Dashboard/Dashboard'); 
+import React from 'react';
+import { Router, Route } from 'react-router';
 
 var Login = React.createClass({
 

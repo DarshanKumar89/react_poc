@@ -1,4 +1,4 @@
-var React = require('react'); 
+import React from 'react'; 
 
 var Menu = React.createClass({
 	render: function() {  

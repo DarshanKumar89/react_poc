@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var ArrayData = [{
     info: "Contract with Globant Company",

@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var TableWidget = React.createClass({
     render: function() {

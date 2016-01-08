@@ -1,5 +1,5 @@
 import React from 'react';
-import LineGraph from './../../common/Charts/LineGraph.js'; 
+import LineGraph from './../../common/Charts/LineGraph'; 
 
 
 

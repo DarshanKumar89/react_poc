@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var MainContent = React.createClass({
+var Activity = React.createClass({
     render: function() {
         return ( 
             <div className="hpanel stats">
@@ -62,4 +62,4 @@ var MainContent = React.createClass({
     }
 });
 
-module.exports = MainContent;
+module.exports = Activity;
