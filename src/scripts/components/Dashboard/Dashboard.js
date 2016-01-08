@@ -1,23 +1,18 @@
 var React = require('react');
-var Header = require('./Header.js');
-var Menu = require('./Menu.js');
-var Activity = require('./Activity.js');
-var LineGraphWidget = require('./Widgets/LineGraphWidget.js');
-var Listing = require('./Listing.js');
+var TopHeader = require('./Header.js');
+var LeftMenu = require('./Menu.js');
+var MainContent = require('./MainContent.js');
 
 var Dashboard = React.createClass({
-	render: function() { 
-		return (
-			<div id="Dashboard"> 
-				 <Header/>  
-				 <Menu/>
-			 	<LineGraphWidget/>
-			 	<Activity/>
-			 	<Listing/>
-			</div>   
-		); 
-	}
-	
+    render: function() {
+        return ( 
+        	<div>
+        		<TopHeader/>
+        		<LeftMenu/>
+        		<MainContent/>
+        	</div>   
+        );
+    }
 });
-	
+
 module.exports = Dashboard;
