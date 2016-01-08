@@ -1,0 +1,36 @@
+.not-found {
+	overflow:hidden;
+	height:100vh;
+	background:#deffce; 
+    margin: 0 auto;
+    .logo {
+        text-align: center;
+        margin-top: 200px;
+        img {
+            max-width: 350px;
+            width: 100%;
+        }
+        p {
+            color: #272727;
+            font-size: 40px;
+            margin-top: 1px;
+            span {
+                color: lightgreen;
+            }
+        }
+        .sub {
+            a {
+                color: #fff;
+                background: #272727;
+                text-decoration: none;
+                padding: 10px 20px;
+                font-size: 13px;
+                font-family: arial, serif;
+                font-weight: bold;
+                -webkit-border-radius: .5em;
+                -moz-border-radius: .5em;
+                -border-radius: .5em;
+            }
+        }
+    }
+}

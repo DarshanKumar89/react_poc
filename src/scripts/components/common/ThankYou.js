@@ -5,11 +5,16 @@ var ThankYou = React.createClass({
 	render: function() { 
 		return (
 			<div>
-				<div className="color-line"></div>
-				<div className="text-center" style={{"width" : "500px", "margin" : "auto", "paddingTop":"10%"}}>
-					<h1>Thanks for Signing up with us!!!</h1>
-					<b><Link to="login">click here</Link></b> to login
-				</div>
+				<section className="thank-you">
+					<div>
+						<h1>Thank You</h1>
+						<p>Thank you for signing up... </p>
+						<div className="login">
+							<Link to="login">Login</Link>
+						</div>
+						
+					</div>
+				</section>
 			</div>
 		); 
 	}

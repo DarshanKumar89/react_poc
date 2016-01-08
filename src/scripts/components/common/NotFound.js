@@ -5,11 +5,15 @@ var NotFound = React.createClass({
 	render: function() { 
 		return (
 			<div>
-				<div className="color-line"></div>
-				<div className="text-center" style={{"width" : "500px", "margin" : "auto", "paddingTop":"10%"}}>
-					<h1>Page Not Found!!!</h1>
-					<b><Link to="dashboard">click here</Link></b> to go to dashboard
-				</div>
+				<div className="not-found">
+					<div className="logo">
+						<p>OOPS! - Could not Find it</p>
+						<img src="images/404.png"/>
+						<div className="sub">
+						<p><Link to="dashboard">Back to home</Link></p>
+						</div>
+					</div>
+				</div>	
 			</div>
 		); 
 	}
