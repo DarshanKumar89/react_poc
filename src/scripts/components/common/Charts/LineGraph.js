@@ -39,27 +39,12 @@ export default class LineGraph extends React.Component {
 		});
 	}
 
-	render () {  
+	render () {
 		return (
       <div>
-      	<div className="graph">
-        <canvas id="canvas"></canvas>
+      	<div>
+        	<canvas id="canvas" style={{"height" : "160px", "width" : "508px"}}></canvas>
         </div>
-		<div className="info text-center">
-
-			<div className="small">
-				<span className="glyphicon glyphicon-time"></span> Active duration
-			</div>
-
-			<div>
-				<h1 className="font-extra-bold m-t-xl m-b-xs">10 Months</h1>
-				<small>And four weeks</small>
-			</div>
-
-			<div className="small m-t-xl">
-				<span className="glyphicon glyphicon-time"></span> Last active in 12.10.2015
-			</div>
-		</div>
       </div> 
     );  
 	}
