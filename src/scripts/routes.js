@@ -10,6 +10,7 @@ var BootstrapJS = require('./components/External/bootstrap.min');
 
 var AppContainer = require('./components/common/AppContainer');
 var NotFound = require('./components/common/NotFound');
+var ThankYou = require('./components/common/ThankYou');
 var Dashboard = require('./components/Dashboard/Dashboard');
 var Login = require('./components/Login/Login');
 var Register = require('./components/Register/Register'); 
@@ -23,6 +24,7 @@ var Routes = React.createClass({
           <IndexRoute component={Login} />
           <Route path="register" component={Register} />
           <Route path="dashboard" component={Dashboard} />
+          <Route path="thanks" component={ThankYou} />
         </Route>
         <Route path="*" component={NotFound} />
       </Router>

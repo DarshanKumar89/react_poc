@@ -7,6 +7,9 @@ var Register = React.createClass({
     },
 
     handleChange: function(e) {
+
+
+
     	this.state.user[e.target.name] = e.target.value; 
     	this.setState({});
     },
@@ -23,11 +26,24 @@ var Register = React.createClass({
       if (!Object.keys(user).length ) {
         return;
       }
+
+      if (user.email != user.email2) {
+        alert("Please make sure that email are same!!!");
+        return;
+      }
+
+      if (user.password != user.password2) {
+        alert("Please make sure that password are same!!!");
+        return;
+      }
+
+
       
       // TODO: send request to the server
       console.log(user);
       this.state.user = {};
       this.setState({});
+      window.location.hash ="thanks";
     },
 	
 	render: function() { 
@@ -53,7 +69,8 @@ var Register = React.createClass({
 				                                	onChange={this.handleChange}
 				                                	className="form-control" 
 				                                	name="username" 
-				                                	type="text" />
+				                                	type="text" 
+				                                	required />
 				                            </div>
 				                            <div className="form-group col-lg-6">
 				                                <label>Password</label>
@@ -61,7 +78,8 @@ var Register = React.createClass({
 				                                	onChange={this.handleChange}
 				                                	className="form-control" 
 				                                	name="password" 
-				                                	type="password" />
+				                                	type="password"
+				                                	required />
 				                            </div>
 				                            <div className="form-group col-lg-6">
 				                                <label>Repeat Password</label>
@@ -69,7 +87,8 @@ var Register = React.createClass({
 				                                	onChange={this.handleChange}
 				                                	className="form-control" 
 				                                	name="password2" 
-				                                	type="password" />
+				                                	type="password" 
+				                                	required/>
 				                            </div>
 				                            <div className="form-group col-lg-6">
 				                                <label>Email Address</label>
@@ -77,7 +96,8 @@ var Register = React.createClass({
 				                                	onChange={this.handleChange}
 				                                	className="form-control" 
 				                                	name="email" 
-				                                	type="email" />
+				                                	type="email"
+				                                	required />
 				                            </div>
 				                            <div className="form-group col-lg-6">
 				                                <label>Repeat Email Address</label>
@@ -85,7 +105,8 @@ var Register = React.createClass({
 				                                	onChange={this.handleChange}
 				                                	className="form-control" 
 				                                	name="email2" 
-				                                	type="email" />
+				                                	type="email" 
+				                                	required/>
 				                            </div>
 				                            <div className="checkbox col-lg-12">
 											    <label>

@@ -12,7 +12,7 @@ var LineGraphWidget = React.createClass({
 		                <div className="hpanel">
 		                    <div className="panel-heading">
 		                        <div className="panel-tools">
-		                            <a className="showhide"><i className="glyphicon glyphicon-chevron-up"></i></a>
+		                            <a className="showhide"><i className="fa fa-chevron-up"></i></a>
 		                            <a className="closebox"><i className="glyphicon glyphicon"></i></a>
 		                        </div>
 		                        Dashboard information and statistics

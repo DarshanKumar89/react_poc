@@ -1,0 +1,39 @@
+.thank-you {
+    background: #deffce;
+    height: 100vh;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    div {
+        position: relative;
+        text-align: center;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    h1 {
+        font-size: 120px;
+        color: #62cb31;
+    }
+    p {
+        color: #272727;
+        font-size: 40px;
+        margin-top: 1px;
+    }
+    .login {
+      margin-top: 70px;
+      a{
+        color: #fff;
+        background: #272727;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 13px;
+        font-family: arial, serif;
+        font-weight: bold;
+        -webkit-border-radius: .5em;
+        -moz-border-radius: .5em;
+        -border-radius: .5em;
+        }
+    }
+}
