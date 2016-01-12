@@ -4,11 +4,11 @@ import { Router, Route, IndexRoute, Redirect, browserHistory } from 'react-route
 window.jQuery = window.$ = require('jquery');
 var BootstrapJS = require('./components/External/bootstrap.min');
 
-import AppContainer from './components/common/AppContainer';
 import NotFound from './components/common/NotFound';
 import ThankYou from './components/common/ThankYou';
+import AppContainer from './containers/AppContainer';
 import Dashboard from './components/Dashboard/Dashboard';
-import Login from './components/Login/Login';
+import { LoginContainer } from './containers/LoginContainer';
 import Register from './components/Register/Register'; 
 
 export default class Routes extends React.Component {
@@ -17,7 +17,7 @@ export default class Routes extends React.Component {
       <Router history={browserHistory}>
         <Route path="/" component={AppContainer}>
           <Redirect from="/login" to="/" />
-          <IndexRoute component={Login} />
+          <IndexRoute component={LoginContainer} />
           <Route path="register" component={Register} />
           <Route path="dashboard" component={Dashboard} />
           <Route path="thanks" component={ThankYou} />

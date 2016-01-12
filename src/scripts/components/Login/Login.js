@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Router, Route } from 'react-router';
 
 export default class Login extends React.Component {
@@ -12,7 +12,7 @@ export default class Login extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleRememberMe = this.handleRememberMe.bind(this);
-    this.loginSubmit = this.loginSubmit.bind(this);
+    //this.loginSubmit = this.loginSubmit.bind(this);
   }
 
 
@@ -26,7 +26,7 @@ export default class Login extends React.Component {
     	this.setState({});	 
     }
 
-    loginSubmit (e) {  
+    /* loginSubmit (e) {  
       e.preventDefault();
       var user = this.state.user;
       if (!user.username || !user.password) {
@@ -37,7 +37,7 @@ export default class Login extends React.Component {
       this.state.user = {};
       this.setState({});
       window.location.hash ="dashboard";
-    }
+    } */
 	
 	render () { 
 		return (
@@ -114,4 +114,10 @@ export default class Login extends React.Component {
 		); 
 	}
 	
+}
+
+Login.propTypes = {
+	loginSubmit: PropTypes.func.isRequired,
+
+
 }
