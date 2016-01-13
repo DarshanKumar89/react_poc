@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class Register extends React.Component {
 
@@ -43,7 +44,6 @@ export default class Register extends React.Component {
       }
       
       // TODO: send request to the server
-      console.log(user);
       this.state.user = {};
       this.setState({});
       window.location.hash ="thanks";

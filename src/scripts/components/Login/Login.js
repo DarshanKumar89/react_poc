@@ -1,5 +1,5 @@
-import React from 'react';
-import { Router, Route } from 'react-router';
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default class Login extends React.Component {
 
@@ -27,17 +27,15 @@ export default class Login extends React.Component {
     }
 
     loginSubmit (e) {  
+    	console.log(this.context.router)
       e.preventDefault();
       var user = this.state.user;
       if (!user.username || !user.password) {
         return;
       }
 
-      // TODO: send request to the server
-      this.state.user = {};
-      this.setState({});
-      window.location.hash ="dashboard";
-    }
+      this.props.loginSubmit(user);
+    } 
 	
 	render () { 
 		return (
@@ -91,7 +89,7 @@ export default class Login extends React.Component {
 						              	<div>
 			                            	<input type="submit" value="Login" 
 			                            		className="btn btn-success btn-block" />
-			                            	<a className="btn btn-default btn-block" href="/#/register">Register</a>
+			                            		<Link className="btn btn-default btn-block" to="/register">Register</Link>
 			                            </div>
 
 						              
@@ -114,4 +112,8 @@ export default class Login extends React.Component {
 		); 
 	}
 	
+}
+
+Login.propTypes = {
+	loginSubmit: PropTypes.func.isRequired,
 }
