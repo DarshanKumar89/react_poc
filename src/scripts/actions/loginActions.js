@@ -34,7 +34,8 @@ export function doLoginFailure(user) {
 export function authenticateUser(user) {
 	return dispatch => {
 		dispatch(doLogin(user))
-		return fetch("http://www.reddit.com/r/reactjs.json")
+		return fetch("http://localhost:3000/login/", {
+      method: "post" })
       .then(response => response.json())
       .then(json => dispatch(doLoginSuccess(user, json)))
       .catch(err => dispatch(doLoginFailure(user, err)))
