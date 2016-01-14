@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { DO_LOGIN, DO_LOGIN_SUCCESS, DO_LOGIN_FAILURE } from './../actions/loginActions'
+import { DO_REGISTER, DO_REGISTER_SUCCESS, DO_REGISTER_FAILURE } from './../actions/registerActions'
 
-const initialLoginState = {
+const initialRegisterState = {
   user: {},
   isFetching: false,
   isError: false
 }
 
-export default function loginApp(state = initialLoginState, action) {
+export default function registerApp(state = initialRegisterState, action) {
   switch (action.type) {
-    case DO_LOGIN:
+    case DO_REGISTER:
       return Object.assign({}, state, { isFetching: true }) /// use ...
-    case DO_LOGIN_SUCCESS:
+    case DO_REGISTER_SUCCESS:
       return Object.assign({}, state, { isFetching: false })
-    case DO_LOGIN_FAILURE:
+    case DO_REGISTER_SUCCESS:
       return Object.assign({}, state, { isFetching: false, isError: true })
     default:
       return state

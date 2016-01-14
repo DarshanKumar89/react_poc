@@ -1,8 +1,87 @@
-import React from 'react'; 
+import React from 'react';
+
+var menus = [{ 
+    "label": "Dashboard", 
+    "subMenu":[]
+},{ 
+    "label": "Analytics", 
+    "subMenu":[]
+},{ 
+    "label": "Common Views", 
+    "subMenu":[{"subLabel": "Login", "link": "/#login"}, 
+                {"subLabel": "Register", "link": "/#register"}]
+},{
+    "label": "Interface", 
+    "subMenu":[{"subLabel": "Panels design", "link": "#panels.html"}, 
+                {"subLabel": "Typography", "link": "#typography.html"},
+                {"subLabel": "Colors & Buttons", "link": "#buttons.html"}]
+},{   
+    "label": "App views", 
+    "subMenu":[{"subLabel": "Thank You", "link": "/#thanks"}, 
+                {"subLabel": "Not Found", "link": "/#hregherg"}]
+},{   
+    "label": "Charts", 
+    "subMenu":[{"subLabel": "ChartJs", "link": "/#ChartJs"}, 
+                {"subLabel": "D3Js", "link": "/#d3js"}]
+},{   
+    "label": "Box transitions", 
+    "subMenu":[{"subLabel": "Overview", "link": "/#ChartJs"},
+                {"subLabel": "Overview 2", "link": "/#ChartJs"}]
+},{   
+    "label": "Tables", 
+    "subMenu":[{"subLabel": "Tables design", "link": "/#ChartJs"}, 
+                {"subLabel": "Foo Table", "link": "/#d3js"}]
+},{   
+    "label": "Forms", 
+    "subMenu":[{"subLabel": "Forms elements", "link": "/#ChartJs"}, 
+                {"subLabel": "Forms extended", "link": "/#d3js"}]
+},{   
+    "label": "Landing page", 
+    "subMenu":[]
+}]; 
 
 export default class Menu extends React.Component {
-	render () {  
-		return (
+
+    constructor (props) { 
+        super(props);
+        this.state = {
+            menuData: menus
+        };
+    }
+    componentDidMount() {
+         $("#side-menu>li:first").addClass("active");   
+    }
+    render () {
+        var myMenu = this.state.menuData.map(function(obj, i){
+
+            let xx;
+            if(obj.label == 'Dashboard'){
+                xx = <span className="label label-success pull-right">v.1</span>
+            }else if(obj.label == 'Analytics'){
+                xx = <span className="label label-warning pull-right">NEW</span>
+            }else{
+                xx = <span className="fa fa-angle-down pull-right"></span>
+            }
+
+            return(
+                <li key={i}>
+                    <a>
+                        <span className="nav-label">{obj.label}</span>
+                        {xx}
+                    </a>
+                    <ul className="nav nav-second-level collapse">
+                        {
+                            obj.subMenu.map(function(eachObj, i){
+                                return (
+                                    <li  key={i}><a href={eachObj.link}>{eachObj.subLabel}</a></li>
+                                )
+                            })
+                        }
+                    </ul>
+                </li>
+            )
+        });  
+        return (
       <div>
         <aside id="menu">
             <div id="navigation">
@@ -36,70 +115,7 @@ export default class Menu extends React.Component {
                 </div>
 
                 <ul className="nav" id="side-menu">
-                    <li className="active">
-                        <a> <span className="nav-label">Dashboard</span> <span className="label label-success pull-right">v.1</span> </a>
-                    </li>
-                    <li>
-                        <a> <span className="nav-label">Analytics</span><span className="label label-warning pull-right">NEW</span> </a>
-                    </li>
-                    <li>
-                        <a href="#"><span className="nav-label">Common views</span><span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="/#login">Login</a></li>
-                            <li><a href="/#register">Register</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a><span className="nav-label">Interface</span>
-                            <span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="#panels.html">Panels design</a></li>
-                            <li><a href="#typography.html">Typography</a></li>
-                            <li><a href="#buttons.html">Colors &amp; Buttons</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span className="nav-label">App views</span><span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="#contacts.html">Contacts</a></li>
-                            <li><a href="#projects.html">Projects</a></li>
-                            <li><a href="#search.html">Search view</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span className="nav-label">Charts</span><span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="#chartjs.html">ChartJs</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span className="nav-label">Box transitions</span><span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="#overview.html"><span className="label label-success pull-right">Start</span> Overview </a>  </li>
-                            <li><a href="#transition_two.html">Columns from up</a></li>
-                            <li><a href="#transition_one.html">Columns custom</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li>
-                        <a href="#"><span className="nav-label">Tables</span><span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="#tables_design.html">Tables design</a></li>
-                            <li><a href="#footable.html">Foo Table</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><span className="nav-label">Forms</span><span className="fa fa-angle-down pull-right"></span> </a>
-                        <ul className="nav nav-second-level collapse">
-                            <li><a href="#forms_elements.html">Forms elements</a></li>
-                            <li><a href="#forms_extended.html">Forms extended</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="landing_page.html"> <span className="nav-label">Landing page</span></a>
-                    </li>
-                    
+                    {myMenu}
                 </ul>
             </div>
         </aside>
@@ -107,5 +123,5 @@ export default class Menu extends React.Component {
       </div>
 
     );  
-	}
+    }
 }

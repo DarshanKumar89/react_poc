@@ -9,7 +9,7 @@ import ThankYou from './components/common/ThankYou';
 import AppContainer from './containers/AppContainer';
 import Dashboard from './components/Dashboard/Dashboard';
 import LoginContainer from './containers/LoginContainer';
-import Register from './components/Register/Register'; 
+import RegisterContainer from './containers/RegisterContainer'; 
 
 export default class Routes extends React.Component {
   render () { 
@@ -18,7 +18,7 @@ export default class Routes extends React.Component {
         <Route path="/" component={AppContainer}>
           <Redirect from="/login" to="/" />
           <IndexRoute component={LoginContainer} />
-          <Route path="register" component={Register} />
+          <Route path="register" component={RegisterContainer} />
           <Route path="dashboard" component={Dashboard} />
           <Route path="thanks" component={ThankYou} />
         </Route>

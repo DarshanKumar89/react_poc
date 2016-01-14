@@ -43,10 +43,7 @@ export default class Register extends React.Component {
         return;
       }
       
-      // TODO: send request to the server
-      this.state.user = {};
-      this.setState({});
-      window.location.hash ="thanks";
+      this.props.registerSubmit(user);
     }
 	
 	render () { 
