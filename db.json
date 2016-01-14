@@ -1,7 +1,16 @@
 {
-  "tasks": [],
-  "login": {
-  	"user": "demo",
-  	"password": "pwd"
+  "register": {},
+  "login": {},
+  "dashboard": {
+  	"sidebar": {
+  		"userInfo": {},
+  		"navigationLinks": []
+  	},
+  	"widgets": {
+  		"statistics": {},
+  		"activity": {},
+  		"recentlyActive": {},
+  		"lastActive": {}
+  	}
   }
 }
