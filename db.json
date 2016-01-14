@@ -10,7 +10,82 @@
     "dashboard": {
         "sidebar": {
             "userInfo": {},
-            "navigationLinks": []
+            "navigationLinks": [{
+                "label": "Dashboard",
+                "subMenu": []
+            }, {
+                "label": "Analytics",
+                "subMenu": []
+            }, {
+                "label": "Common Views",
+                "subMenu": [{
+                    "subLabel": "Login",
+                    "link": "/#login"
+                }, {
+                    "subLabel": "Register",
+                    "link": "/#register"
+                }]
+            }, {
+                "label": "Interface",
+                "subMenu": [{
+                    "subLabel": "Panels design",
+                    "link": "#panels.html"
+                }, {
+                    "subLabel": "Typography",
+                    "link": "#typography.html"
+                }, {
+                    "subLabel": "Colors & Buttons",
+                    "link": "#buttons.html"
+                }]
+            }, {
+                "label": "App views",
+                "subMenu": [{
+                    "subLabel": "Thank You",
+                    "link": "/#thanks"
+                }, {
+                    "subLabel": "Not Found",
+                    "link": "/#hregherg"
+                }]
+            }, {
+                "label": "Charts",
+                "subMenu": [{
+                    "subLabel": "ChartJs",
+                    "link": "/#ChartJs"
+                }, {
+                    "subLabel": "D3Js",
+                    "link": "/#d3js"
+                }]
+            }, {
+                "label": "Box transitions",
+                "subMenu": [{
+                    "subLabel": "Overview",
+                    "link": "/#ChartJs"
+                }, {
+                    "subLabel": "Overview 2",
+                    "link": "/#ChartJs"
+                }]
+            }, {
+                "label": "Tables",
+                "subMenu": [{
+                    "subLabel": "Tables design",
+                    "link": "/#ChartJs"
+                }, {
+                    "subLabel": "Foo Table",
+                    "link": "/#d3js"
+                }]
+            }, {
+                "label": "Forms",
+                "subMenu": [{
+                    "subLabel": "Forms elements",
+                    "link": "/#ChartJs"
+                }, {
+                    "subLabel": "Forms extended",
+                    "link": "/#d3js"
+                }]
+            }, {
+                "label": "Landing page",
+                "subMenu": []
+            }]
         },
         "widgets": {
             "statistics": {},
