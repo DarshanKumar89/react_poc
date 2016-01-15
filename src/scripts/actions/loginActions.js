@@ -34,17 +34,10 @@ export function doLoginFailure(user) {
 export function authenticateUser(user) {
 	return dispatch => {
 		dispatch(doLogin(user))
-		return fetch("http://localhost:3000/login/", {
+		return fetch("http://localhost:3000/login", {
       method: "post" })
       .then(response => response.json())
       .then(json => dispatch(doLoginSuccess(user, json)))
       .catch(err => dispatch(doLoginFailure(user, err)))
-
-      // .then(response => response.json())
-      // .then(json => 
-      // 	dispatch(doLoginSuccess(json))
-      // ).fail(json =>
-      // 	dispatch(doLoginFailure(json))
-      // )
   }
 }

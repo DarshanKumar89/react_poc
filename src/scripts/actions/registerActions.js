@@ -17,7 +17,7 @@ export function doRegister(user) {
 }
 
 export function doRegisterSuccess(user) {
-  hashHistory.push('/thanks'); // Should be moved to middleware? To be called after the login postprocessing is done.
+  hashHistory.push('/thanks'); // Should be moved to middleware? To be called after the register postprocessing is done.
   return { 
   	type: DO_REGISTER_SUCCESS, 
   	user 
@@ -34,16 +34,9 @@ export function doRegisterFailure(user) {
 export function registerUser(user) {
 	return dispatch => {
 		dispatch(doRegister(user))
-		return fetch("http://www.reddit.com/r/reactjs.json")
+		return fetch("http://localhost:3000/register")
       .then(response => response.json())
       .then(json => dispatch(doRegisterSuccess(user, json)))
       .catch(err => dispatch(doRegisterFailure(user, err)))
-
-      // .then(response => response.json())
-      // .then(json => 
-      // 	dispatch(doRegisterSuccess(json))
-      // ).fail(json =>
-      // 	dispatch(doRegisterFailure(json))
-      // )
   }
 }

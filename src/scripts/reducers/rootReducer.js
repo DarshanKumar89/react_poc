@@ -6,8 +6,8 @@ import registerApp from './registerReducer'
 
 //Add all reducers here
 const rootReducer = combineReducers({
-  loginApp: loginApp,
-  registerApp: registerApp
+  loginApp,
+  registerApp
 })
 
 export default rootReducer
