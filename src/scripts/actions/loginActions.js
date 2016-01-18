@@ -35,7 +35,12 @@ export function authenticateUser(user) {
 	return dispatch => {
 		dispatch(doLogin(user))
 		return fetch("http://localhost:3000/login", {
-      method: "post" })
+        method: "post" , 
+        body: JSON.stringify(user),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+    })
       .then(response => response.json())
       .then(json => dispatch(doLoginSuccess(user, json)))
       .catch(err => dispatch(doLoginFailure(user, err)))

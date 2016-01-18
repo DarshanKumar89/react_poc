@@ -34,7 +34,13 @@ export function doRegisterFailure(user) {
 export function registerUser(user) {
 	return dispatch => {
 		dispatch(doRegister(user))
-		return fetch("http://localhost:3000/register")
+		return fetch("http://localhost:3000/register", {
+        method: "post" , 
+        body: JSON.stringify(user),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+    })
       .then(response => response.json())
       .then(json => dispatch(doRegisterSuccess(user, json)))
       .catch(err => dispatch(doRegisterFailure(user, err)))

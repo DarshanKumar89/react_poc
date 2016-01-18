@@ -42,6 +42,8 @@ export default class Register extends React.Component {
         return;
       }
       
+      delete user.email2;
+      delete user.password2;
       this.props.registerSubmit(user);
     }
 	
