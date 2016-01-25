@@ -2,7 +2,12 @@ import { GET_DASHDATA, GET_DASHDATA_SUCCESS, GET_DASHDATA_FAILURE } from './../a
 
 const initialDashboardState = {
   isFetching: false,
-  isError: false
+  isError: false,
+  dashData: {
+    sidebar: {
+      navigationLinks: []
+    }
+  }
 }
 
 export default function dashboardApp(state = initialDashboardState, action) {

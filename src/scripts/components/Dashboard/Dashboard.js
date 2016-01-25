@@ -4,14 +4,13 @@ import LeftMenu from './Menu';
 import MainContent from './MainContent';
 
 export default class Dashboard extends React.Component {
-    render () {
-    	let data= this.props.dashData || {}
 
-    	//console.log(this.props.dashData)
+    render () {
+    	const { dashData } = this.props
         return ( 
         	<div>
         		<TopHeader/>
-        		<LeftMenu menuData={data.sidebar.navigationLinks}/>
+        		<LeftMenu menuData={ dashData.dashData.sidebar.navigationLinks }/>
         		<MainContent/>
         	</div>   
         );

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-var menus = [{ 
+/*var menus = [{ 
     "label": "Dashboard", 
     "subMenu":[]
 },{ 
@@ -38,21 +38,15 @@ var menus = [{
 },{   
     "label": "Landing page", 
     "subMenu":[]
-}]; 
+}]; */
 
 export default class Menu extends React.Component {
 
-    constructor (props) { 
-        super(props);
-        this.state = {
-            menuData: menus
-        };
-    }
     componentDidMount() {
          $("#side-menu>li:first").addClass("active");   
     }
     render () {
-        var myMenu = this.state.menuData.map(function(obj, i){
+        var myMenu = this.props.menuData.map(function(obj, i){
 
             let xx;
             if(obj.label == 'Dashboard'){
@@ -124,4 +118,8 @@ export default class Menu extends React.Component {
 
     );  
     }
+}
+
+Menu.propTypes = {
+  menuData: PropTypes.array.isRequired
 }

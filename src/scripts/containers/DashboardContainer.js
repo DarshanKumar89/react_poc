@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { loadDashboardData } from '../actions/dashboardActions'
 import Dashboard from './../components/Dashboard/Dashboard'
@@ -11,28 +11,34 @@ class DashboardContainer extends React.Component {
   }
 
   componentDidMount() {
-      const dispatch = this.props.dispatch
-      dispatch(loadDashboardData())
-      .then(json => {
-        console.log("I")
-        // console.log(json.dashData)
-        this.state.dashData = json.dashData
-        this.setState({})
-      })
+    const { dispatch } = this.props
+    dispatch(loadDashboardData())
   }
 
   render() {
+    const { dashData } = this.props
     return (
         <div>
-          <Dashboard dashData={this.state.dashData} />
+          <Dashboard dashData={dashData} />
         </div>
     )
   }
 }
 
-
-function select(state) {
-  return {}
+DashboardContainer.propTypes = {
+  dashData: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 }
 
-export default connect(select)(DashboardContainer)
+//TO-DO: Integrate reselect library to remove boilerplate
+
+function mapStateToProps(state) {
+  const { dashboardApp } = state
+  const dashData = dashboardApp
+
+  return {
+    dashData
+  }
+}
+
+export default connect(mapStateToProps)(DashboardContainer)
